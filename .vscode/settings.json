@@ -1,0 +1,35 @@
+{
+    "python.testing.pytestArgs": [
+        "-s",
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[markdown]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit"
+        },
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit", // import文をsort
+            "source.fixAll": "explicit" // 未使用のimport文を削除
+        },
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+    },
+    "cSpell.ignoreRegExpList": [
+        "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+" // 日本語に対してspell checkが正常に機能しないのでcheck対象から除外
+    ],
+    "files.exclude": {
+        "**/.ruff_cache": true,
+        "**/__pycache__": true,
+        ".pytest_cache": true
+    },
+    "files.insertFinalNewline": true,
+    "git.autofetch": true,
+    "python.analysis.extraPaths": [
+        "src"
+    ]
+}
